@@ -1,2 +1,17 @@
-# Campus-Net-Recon
-A black-box reverse engineering and security analysis of a large-scale campus network architecture.
+# 🏫 Campus-Net-Recon: 大型校园网架构黑盒逆向分析
+
+> **Author:** RinoPaw 🐾
+> **Disclaimer:** 本项目所有探测均基于被动分析与常规网络诊断命令，未进行任何破坏性攻击。所有 IP、MAC 地址及敏感信息均已脱敏处理，仅供网络架构与底层协议学习参考。
+
+---
+
+## 0x00 起因：隐藏在手机设置里的“离谱”掩码 (The Anomaly of /15)
+
+故事的起因，源于一个极其偶然的日常瞬间。
+
+某天，我连着宿舍的校园网 WiFi，无意间点开了手机的 WiFi 网络详情页，想要看一眼自己被分配到了哪个 IP。然而，屏幕上显示的这组网络参数，却让我瞬间皱起了眉头：
+
+```text
+IP 地址: 10.202.41.166
+路由器 (网关): 10.203.255.254
+子网掩码: 255.254.0.0
