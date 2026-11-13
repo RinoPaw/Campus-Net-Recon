@@ -3,7 +3,8 @@
 # This uses Windows' built-in raw IPv4 socket (SIO_RCVALL).
 # It prints only ICMP events quoting the listed UDP requests;
 # unrelated packets are discarded in memory and no capture file is written.
-# Usage: powershell -NoProfile -File .\scripts\observe-icmp-dns-win7.ps1 -LocalIPv4 192.168.245.38
+# Usage (if PS2 policy is Restricted, bypass only for this process):
+# powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\observe-icmp-dns-win7.ps1 -LocalIPv4 192.168.245.38
 param(
     [Parameter(Mandatory=$true)][string]$LocalIPv4,
     [int]$CaptureSeconds = 8
